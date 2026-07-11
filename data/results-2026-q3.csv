@@ -1,0 +1,201 @@
+target,origin,score,max_score,grade,prompt-injection-hidden,llms-txt-present,robots-ai-stance,structured-data,transparency-contact,sitemap-present,answerability,meta-robots,mcp-signal,error
+openai.com,,,,,,,,,,,,,,"Could not fetch https://openai.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+anthropic.com,https://anthropic.com,64,100,C,40,0,5,0,9,5,0,5,0,
+mistral.ai,https://mistral.ai,76,100,B,40,12,5,0,9,3,2,5,0,
+cohere.com,https://cohere.com,90,100,A,40,12,5,12,9,5,2,5,0,
+perplexity.ai,,,,,,,,,,,,,,"Could not fetch https://perplexity.ai: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+huggingface.co,https://huggingface.co,64,100,C,40,0,5,0,9,5,0,5,0,
+stability.ai,https://stability.ai,83,100,B,40,0,12,12,9,5,0,5,0,
+x.ai,,,,,,,,,,,,,,"Could not fetch https://x.ai: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+deepmind.google,https://deepmind.google,88,100,B,40,12,5,12,9,5,0,5,0,
+scale.com,https://scale.com,64,100,C,40,0,5,0,9,5,0,5,0,
+midjourney.com,,,,,,,,,,,,,,"Could not fetch https://midjourney.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+elevenlabs.io,https://elevenlabs.io,93,100,A,40,12,5,12,9,5,5,5,0,
+runwayml.com,https://runwayml.com,81,100,B,40,0,5,12,9,5,5,5,0,
+together.ai,https://together.ai,95,100,A,40,12,12,12,9,5,0,5,0,
+groq.com,https://groq.com,66,100,C,40,0,5,0,9,5,2,5,0,
+replicate.com,https://replicate.com,78,100,B,40,12,5,0,9,5,2,5,0,
+salesforce.com,https://salesforce.com,89,100,B,40,12,5,12,5,5,5,5,0,
+hubspot.com,https://hubspot.com,78,100,B,40,0,5,12,9,5,2,5,0,
+slack.com,,,,,,,,,,,,,,Could not fetch https://slack.com: the server returned HTTP 429.
+zoom.us,https://zoom.us,76,100,B,40,0,5,12,9,5,0,5,0,
+notion.so,https://notion.so,76,100,B,40,12,5,0,9,5,0,5,0,
+atlassian.com,https://atlassian.com,88,100,B,40,12,5,12,9,5,0,5,0,
+asana.com,https://asana.com,88,100,B,40,12,5,12,9,5,0,5,0,
+monday.com,https://monday.com,95,100,A,40,12,12,12,9,5,0,5,0,
+airtable.com,https://airtable.com,66,100,C,40,0,5,0,9,5,2,5,0,
+dropbox.com,https://dropbox.com,91,100,A,40,12,5,12,9,3,5,5,0,
+box.com,https://box.com,76,100,B,40,0,5,12,9,5,0,5,0,
+shopify.com,https://shopify.com,90,100,A,40,12,5,12,9,5,2,5,0,
+stripe.com,https://stripe.com,91,100,A,40,12,5,12,9,3,5,5,0,
+intercom.com,https://intercom.com,93,100,A,40,12,5,12,9,5,5,5,0,
+zendesk.com,https://zendesk.com,90,100,A,40,12,5,12,9,5,2,5,0,
+figma.com,https://figma.com,79,100,B,40,0,12,12,5,5,0,5,0,
+canva.com,,,,,,,,,,,,,,"Could not fetch https://canva.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+calendly.com,https://calendly.com,98,100,A,40,12,12,12,9,3,5,5,0,
+docusign.com,https://docusign.com,78,100,B,40,0,5,12,9,5,2,5,0,
+twilio.com,https://twilio.com,88,100,B,40,12,5,12,9,5,0,5,0,
+workday.com,https://workday.com,79,100,B,40,0,5,12,9,3,5,5,0,
+servicenow.com,,,,,,,,,,,,,,"Could not fetch https://servicenow.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+datadog.com,https://datadog.com,88,100,B,40,12,5,12,9,5,0,5,0,
+snowflake.com,https://snowflake.com,62,100,C,40,0,5,0,9,3,0,5,0,
+zapier.com,https://zapier.com,95,100,A,40,12,12,12,9,5,0,5,0,
+miro.com,https://miro.com,64,100,C,40,0,5,0,9,3,2,5,0,
+loom.com,https://loom.com,88,100,B,40,12,12,12,0,5,2,5,0,
+linear.app,https://linear.app,76,100,B,40,12,5,0,9,5,0,5,0,
+github.com,https://github.com,71,100,C,40,12,5,0,9,0,0,5,0,
+gitlab.com,https://gitlab.com,76,100,B,40,0,5,12,9,5,0,5,0,
+vercel.com,https://vercel.com,90,100,A,40,12,5,12,9,5,2,5,0,
+netlify.com,https://netlify.com,95,100,A,40,12,12,12,9,3,2,5,0,
+cloudflare.com,https://cloudflare.com,95,100,A,40,12,12,12,9,5,0,5,0,
+digitalocean.com,https://digitalocean.com,64,100,C,40,0,5,0,9,3,2,5,0,
+heroku.com,https://heroku.com,91,100,A,40,12,5,12,9,3,5,5,0,
+npmjs.com,,,,,,,,,,,,,,"Could not fetch https://npmjs.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+pypi.org,https://pypi.org,66,100,C,40,0,5,0,9,5,2,5,0,
+stackoverflow.com,https://stackoverflow.com,68,100,C,40,0,0,12,9,0,2,5,0,
+docker.com,https://docker.com,81,100,B,40,0,5,12,9,5,5,5,0,
+kubernetes.io,https://kubernetes.io,67,100,C,40,0,5,12,0,5,0,5,0,
+supabase.com,https://supabase.com,85,100,B,40,12,12,0,9,5,2,5,0,
+railway.app,https://railway.app,93,100,A,40,12,5,12,9,5,5,5,0,
+render.com,https://render.com,98,100,A,40,12,12,12,9,3,5,5,0,
+bitbucket.org,https://bitbucket.org,69,100,C,40,0,5,12,5,0,2,5,0,
+nytimes.com,https://nytimes.com,81,100,B,40,0,12,12,9,3,0,5,0,
+theguardian.com,https://theguardian.com,71,100,C,40,0,12,0,9,3,2,5,0,
+bbc.com,https://bbc.com,85,100,B,40,0,12,12,9,5,2,5,0,
+reuters.com,,,,,,,,,,,,,,"Could not fetch https://reuters.com: the server returned HTTP 401 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+apnews.com,https://apnews.com,85,100,B,40,0,12,12,9,5,2,5,0,
+bloomberg.com,https://bloomberg.com,83,100,B,40,0,12,12,9,5,0,5,0,
+wsj.com,,,,,,,,,,,,,,"Could not fetch https://wsj.com: the server returned HTTP 401 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+washingtonpost.com,,,,,,,,,,,,,,"Could not fetch https://washingtonpost.com: the request failed (network error, DNS, or timeout)."
+theverge.com,https://theverge.com,81,100,B,40,0,12,12,9,3,0,5,0,
+techcrunch.com,https://techcrunch.com,85,100,B,40,0,12,12,9,5,2,5,0,
+wired.com,https://wired.com,85,100,B,40,0,12,12,9,5,2,5,0,
+arstechnica.com,https://arstechnica.com,45,100,D,40,0,0,0,0,0,0,5,0,
+economist.com,,,,,,,,,,,,,,"Could not fetch https://economist.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+ft.com,,,,,,,,,,,,,,"Could not fetch https://ft.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+cnn.com,https://cnn.com,81,100,B,40,0,12,12,9,3,0,5,0,
+aljazeera.com,https://aljazeera.com,85,100,B,40,0,12,12,9,5,2,5,0,
+npr.org,https://npr.org,71,100,C,40,0,12,0,9,3,2,5,0,
+axios.com,,,,,,,,,,,,,,"Could not fetch https://axios.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+usa.gov,https://usa.gov,76,100,B,40,0,5,12,9,5,0,5,0,
+gov.uk,https://gov.uk,66,100,C,40,0,5,0,9,5,2,5,0,
+europa.eu,https://europa.eu,45,100,D,40,0,5,0,0,0,0,0,0,
+canada.ca,https://canada.ca,67,100,C,40,12,5,0,5,5,0,0,0,
+whitehouse.gov,https://whitehouse.gov,76,100,B,40,0,5,12,9,5,0,5,0,
+irs.gov,https://irs.gov,64,100,C,40,0,5,0,9,5,0,5,0,
+nasa.gov,https://nasa.gov,78,100,B,40,0,5,12,9,5,2,5,0,
+nih.gov,,,,,,,,,,,,,,"Could not fetch https://nih.gov: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+who.int,https://who.int,81,100,B,40,0,12,12,9,3,0,5,0,
+un.org,https://un.org,47,100,D,40,0,0,0,0,0,2,5,0,
+imf.org,https://imf.org,74,100,C,40,12,5,0,9,3,0,5,0,
+worldbank.org,https://worldbank.org,67,100,C,40,0,5,12,0,5,0,5,0,
+oecd.org,,,,,,,,,,,,,,"Could not fetch https://oecd.org: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+wto.org,https://wto.org,67,100,C,40,12,5,0,0,5,0,5,0,
+unfccc.int,https://unfccc.int,50,100,D,40,0,5,0,0,5,0,0,0,
+india.gov.in,,,,,,,,,,,,,,"Could not fetch https://india.gov.in: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+amazon.com,https://amazon.com,57,100,D,40,0,12,0,0,0,0,5,0,
+walmart.com,https://walmart.com,76,100,B,40,0,5,12,9,5,0,5,0,
+target.com,https://target.com,88,100,B,40,12,5,12,9,3,2,5,0,
+bestbuy.com,,,,,,,,,,,,,,"Could not fetch https://bestbuy.com: the request failed (network error, DNS, or timeout)."
+ebay.com,https://ebay.com,81,100,B,40,0,12,12,9,3,0,5,0,
+etsy.com,,,,,,,,,,,,,,"Could not fetch https://etsy.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+ikea.com,https://ikea.com,74,100,C,40,0,5,12,9,3,0,5,0,
+nike.com,https://nike.com,74,100,C,40,0,5,12,9,3,0,5,0,
+airbnb.com,https://airbnb.com,83,100,B,40,0,12,12,9,3,2,5,0,
+booking.com,https://booking.com,53,100,D,40,0,5,0,0,3,0,5,0,
+expedia.com,,,,,,,,,,,,,,Could not fetch https://expedia.com: the server returned HTTP 429.
+doordash.com,,,,,,,,,,,,,,"Could not fetch https://doordash.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+adidas.com,,,,,,,,,,,,,,"Could not fetch https://adidas.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+zara.com,,,,,,,,,,,,,,"Could not fetch https://zara.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+hm.com,,,,,,,,,,,,,,"Could not fetch https://hm.com: the request failed (network error, DNS, or timeout)."
+costco.com,,,,,,,,,,,,,,"Could not fetch https://costco.com: the request failed (network error, DNS, or timeout)."
+instacart.com,https://instacart.com,83,100,B,40,0,12,12,9,0,5,5,0,
+uber.com,,,,,,,,,,,,,,Could not fetch https://uber.com: the server returned HTTP 406.
+chase.com,https://chase.com,64,100,C,40,0,5,0,9,5,0,5,0,
+bankofamerica.com,https://bankofamerica.com,75,100,B,40,0,5,12,5,3,5,5,0,
+wellsfargo.com,https://wellsfargo.com,78,100,B,40,0,5,12,9,5,2,5,0,
+paypal.com,https://paypal.com,91,100,A,40,12,5,12,9,3,5,5,0,
+visa.com,https://visa.com,66,100,C,40,0,0,12,9,0,0,5,0,
+mastercard.com,,,,,,,,,,,,,,"Could not fetch https://mastercard.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+coinbase.com,,,,,,,,,,,,,,"Could not fetch https://coinbase.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+robinhood.com,https://robinhood.com,64,100,C,40,0,5,0,9,5,0,5,0,
+wise.com,https://wise.com,79,100,B,40,0,5,12,9,3,5,5,0,
+americanexpress.com,https://americanexpress.com,74,100,C,40,12,5,0,9,3,0,5,0,
+goldmansachs.com,https://goldmansachs.com,79,100,B,40,0,12,12,5,5,0,5,0,
+jpmorgan.com,https://jpmorgan.com,78,100,B,40,0,5,12,9,5,2,5,0,
+fidelity.com,https://fidelity.com,59,100,D,40,0,5,0,9,5,0,0,0,
+schwab.com,https://schwab.com,67,100,C,40,12,5,0,0,5,0,5,0,
+stripe.dev,https://stripe.dev,72,100,C,40,12,5,0,5,5,0,5,0,
+klarna.com,https://klarna.com,70,100,C,40,12,5,0,5,3,0,5,0,
+tcs.com,,,,,,,,,,,,,,"Could not fetch https://tcs.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+infosys.com,,,,,,,,,,,,,,"Could not fetch https://infosys.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+wipro.com,https://wipro.com,78,100,B,40,0,5,12,9,5,2,5,0,
+relianceindustries.com,https://relianceindustries.com,67,100,C,40,12,5,0,0,5,0,5,0,
+tatamotors.com,https://tatamotors.com,55,100,D,40,0,0,0,5,5,0,5,0,
+hdfcbank.com,https://hdfcbank.com,66,100,C,40,0,0,12,9,0,0,5,0,
+icicibank.com,https://icicibank.com,76,100,B,40,0,5,12,9,3,2,5,0,
+flipkart.com,https://flipkart.com,67,100,C,40,0,5,12,0,3,2,5,0,
+zomato.com,,,,,,,,,,,,,,"Could not fetch https://zomato.com: the request failed (network error, DNS, or timeout)."
+swiggy.com,https://swiggy.com,53,100,D,40,0,5,0,0,3,0,5,0,
+paytm.com,https://paytm.com,90,100,A,40,12,5,12,9,5,2,5,0,
+ola.foundation,https://ola.foundation,67,100,C,40,12,5,0,0,5,0,5,0,
+makemytrip.com,,,,,,,,,,,,,,"Could not fetch https://makemytrip.com: the request failed (network error, DNS, or timeout)."
+timesofindia.indiatimes.com,https://timesofindia.indiatimes.com,88,100,B,40,12,5,12,9,3,2,5,0,
+ndtv.com,,,,,,,,,,,,,,"Could not fetch https://ndtv.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+thehindu.com,https://thehindu.com,71,100,C,40,0,12,0,9,3,2,5,0,
+harvard.edu,https://harvard.edu,78,100,B,40,0,5,12,9,5,2,5,0,
+mit.edu,https://mit.edu,59,100,D,40,0,5,0,9,0,0,5,0,
+stanford.edu,https://stanford.edu,64,100,C,40,0,5,0,9,5,0,5,0,
+ox.ac.uk,,,,,,,,,,,,,,"Could not fetch https://ox.ac.uk: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+cam.ac.uk,https://cam.ac.uk,78,100,B,40,0,5,12,9,5,2,5,0,
+coursera.org,https://coursera.org,100,100,A,40,12,12,12,9,5,5,5,0,
+edx.org,https://edx.org,88,100,B,40,12,5,12,9,5,0,5,0,
+khanacademy.org,https://khanacademy.org,74,100,C,40,12,12,0,0,5,0,5,0,
+udemy.com,,,,,,,,,,,,,,"Could not fetch https://udemy.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+ashoka.edu.in,https://ashoka.edu.in,76,100,B,40,0,5,12,9,5,0,5,0,
+iitb.ac.in,https://iitb.ac.in,59,100,D,40,0,5,0,9,0,0,5,0,
+duolingo.com,https://duolingo.com,67,100,C,40,12,5,0,0,5,0,5,0,
+mayoclinic.org,,,,,,,,,,,,,,"Could not fetch https://mayoclinic.org: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+clevelandclinic.org,https://clevelandclinic.org,90,100,A,40,12,5,12,9,5,2,5,0,
+webmd.com,https://webmd.com,68,100,C,40,0,12,0,9,0,2,5,0,
+healthline.com,https://healthline.com,85,100,B,40,0,12,12,9,5,2,5,0,
+cdc.gov,https://cdc.gov,64,100,C,40,0,5,0,9,3,2,5,0,
+nhs.uk,https://nhs.uk,60,100,C,40,0,5,0,5,5,0,5,0,
+pfizer.com,https://pfizer.com,76,100,B,40,0,5,12,9,5,0,5,0,
+moderna.com,,,,,,,,,,,,,,"Could not fetch https://moderna.com: the request failed (network error, DNS, or timeout)."
+teladoc.com,https://teladoc.com,88,100,B,40,12,5,12,9,5,0,5,0,
+zocdoc.com,,,,,,,,,,,,,,"Could not fetch https://zocdoc.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+iea.org,,,,,,,,,,,,,,"Could not fetch https://iea.org: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+irena.org,,,,,,,,,,,,,,"Could not fetch https://irena.org: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+shell.com,https://shell.com,55,100,D,40,0,5,0,0,5,0,5,0,
+bp.com,https://bp.com,64,100,C,40,0,5,0,9,5,0,5,0,
+tesla.com,,,,,,,,,,,,,,"Could not fetch https://tesla.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+siemens-energy.com,https://siemens-energy.com,69,100,C,40,0,5,0,9,5,5,5,0,
+vestas.com,https://vestas.com,78,100,B,40,0,5,12,9,5,2,5,0,
+orsted.com,,,,,,,,,,,,,,"Could not fetch https://orsted.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+schneider-electric.com,https://schneider-electric.com,62,100,C,40,0,5,0,9,3,0,5,0,
+enphase.com,https://enphase.com,64,100,C,40,0,5,0,9,5,0,5,0,
+apple.com,https://apple.com,76,100,B,40,0,5,12,9,5,0,5,0,
+microsoft.com,https://microsoft.com,64,100,C,40,0,5,0,9,5,0,5,0,
+google.com,https://google.com,69,100,C,40,0,5,0,9,5,5,5,0,
+meta.com,https://meta.com,65,100,C,40,0,5,12,0,3,0,5,0,
+samsung.com,https://samsung.com,100,100,A,40,12,12,12,9,5,5,5,0,
+sony.com,,,,,,,,,,,,,,"Could not fetch https://sony.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+verizon.com,https://verizon.com,78,100,B,40,12,5,0,9,5,2,5,0,
+t-mobile.com,,,,,,,,,,,,,,"Could not fetch https://t-mobile.com: the request failed (network error, DNS, or timeout)."
+vodafone.com,https://vodafone.com,78,100,B,40,0,5,12,9,5,2,5,0,
+airtel.in,https://airtel.in,74,100,C,40,12,12,0,0,5,0,5,0,
+jio.com,,,,,,,,,,,,,,"Could not fetch https://jio.com: the request failed (network error, DNS, or timeout)."
+netflix.com,https://netflix.com,85,100,B,40,12,12,0,9,5,2,5,0,
+spotify.com,https://spotify.com,67,100,C,40,12,5,0,0,5,0,5,0,
+linkedin.com,https://linkedin.com,68,100,C,40,0,12,0,9,0,2,5,0,
+wikipedia.org,https://wikipedia.org,62,100,C,40,0,5,0,9,3,0,5,0,
+reddit.com,https://reddit.com,67,100,C,40,12,5,0,0,5,0,5,0,
+medium.com,,,,,,,,,,,,,,"Could not fetch https://medium.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."
+substack.com,https://substack.com,55,100,D,40,0,5,0,0,5,0,5,0,
+wordpress.com,https://wordpress.com,88,100,B,40,12,5,12,9,5,0,5,0,
+youtube.com,https://youtube.com,64,100,C,40,0,5,0,9,3,2,5,0,
+x.com,https://x.com,74,100,C,40,12,12,0,0,5,0,5,0,
+tiktok.com,,,,,,,,,,,,,,"Could not fetch https://tiktok.com: the request failed (network error, DNS, or timeout)."
+pinterest.com,https://pinterest.com,79,100,B,40,12,5,12,0,5,0,5,0,
+quora.com,,,,,,,,,,,,,,"Could not fetch https://quora.com: the server returned HTTP 403 (the site likely blocks automated clients, for example Cloudflare bot protection)."

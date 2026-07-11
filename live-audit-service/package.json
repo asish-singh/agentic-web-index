@@ -1,0 +1,13 @@
+{
+  "name": "agentic-web-index-live-audit",
+  "version": "1.0.0",
+  "description": "Live audit endpoint for The Agentic Web Index. Wraps agent-readiness-auditor with rate limits.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "agent-readiness-auditor": "^0.4.6"
+  }
+}

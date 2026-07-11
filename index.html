@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Agentic Web Index | Asish Singh</title>
+<meta name="description" content="The Agentic Web Index ranks 200 prominent websites by how ready they are for AI assistants and autonomous agents, scored with the open source agent readiness auditor. Updated quarterly by Asish Singh.">
+<link rel="canonical" href="https://asishsingh.in/agentic-web-index/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Agentic Web Index, Q3 2026">
+<meta property="og:description" content="200 prominent websites ranked by AI agent readiness. Only 38% publish llms.txt. Median score 76/100.">
+<meta property="og:url" content="https://asishsingh.in/agentic-web-index/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Agentic Web Index, Q3 2026",
+  "description": "A quarterly benchmark ranking 200 prominent websites by AI agent readiness across nine automated checks, including llms.txt, robots.txt stance on AI crawlers, structured data, and prompt injection hygiene.",
+  "url": "https://asishsingh.in/agentic-web-index/",
+  "creator": {"@type": "Person", "name": "Asish Singh", "url": "https://asishsingh.in"},
+  "temporalCoverage": "2026-07",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isBasedOn": "https://github.com/asish-singh/agent-readiness-auditor"
+}
+</script>
+<link rel="stylesheet" href="/styles.css?v=16">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="/">Asish Singh</a>
+    <div class="nav-links">
+      <a href="/agentic-web-index/">Index</a>
+      <a href="/open-source/">Open Source</a>
+      <a href="/#about">About</a>
+      <a href="/#conferences">Conferences</a>
+      <a class="nav-cta" href="/#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Quarterly benchmark · Q3 2026</p>
+      <h1>The Agentic Web Index</h1>
+      <p class="tagline">200 prominent websites, ranked by how ready they are for the AI assistants and autonomous agents that increasingly read the web on people's behalf.</p>
+      <p>Every site is scored 0 to 100 by the open source <a target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor">agent readiness auditor</a> across nine automated checks. The full methodology and data are public and reproducible. Published July 2026, updated quarterly.</p>
+    </div>
+  </section>
+
+  <section class="band band-featured">
+    <p class="kicker">Headline findings</p>
+    <h2>The web is still not ready for AI agents</h2>
+    <div class="stats">
+      <div class="stat"><strong data-target="76" data-suffix="/100">76/100</strong><span>median score</span></div>
+      <div class="stat"><strong data-target="38" data-suffix="%">38%</strong><span>publish llms.txt</span></div>
+      <div class="stat"><strong data-target="25" data-suffix="%">25%</strong><span>give AI crawlers explicit rules</span></div>
+      <div class="stat"><strong data-target="24" data-suffix="%">24%</strong><span>block automated visitors entirely</span></div>
+    </div>
+    <p style="margin-top:1.5rem">Of the 200 sites on the panel, 152 could be audited and 48 refused automated visitors outright, making themselves invisible to AI assistants. The strongest sites this edition are <strong>coursera.org and samsung.com</strong> at 100/100. Only 13% of auditable sites publish content structured in the formats AI answers quote most readily.</p>
+  </section>
+
+  <section id="rankings">
+    <p class="kicker">The rankings</p>
+    <h2>All 152 audited sites</h2>
+    <p class="section-note">Scores from the nine check audit. Higher is better. Type to filter the table.</p>
+    <input type="search" id="idx-filter" class="idx-filter" placeholder="Filter by site or sector…" aria-label="Filter rankings">
+    <div class="idx-table-wrap">
+      <table class="idx-table">
+        <thead><tr><th>#</th><th>Site</th><th>Sector</th><th>Score</th><th>Grade</th></tr></thead>
+        <tbody>
+<tr><td>1</td><td class="idx-site">coursera.org</td><td class="idx-sector">Education</td><td class="idx-score">100</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>2</td><td class="idx-site">samsung.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">100</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>3</td><td class="idx-site">calendly.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">98</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>4</td><td class="idx-site">render.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">98</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>5</td><td class="idx-site">cloudflare.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">95</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>6</td><td class="idx-site">monday.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">95</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>7</td><td class="idx-site">netlify.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">95</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>8</td><td class="idx-site">together.ai</td><td class="idx-sector">AI companies</td><td class="idx-score">95</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>9</td><td class="idx-site">zapier.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">95</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>10</td><td class="idx-site">elevenlabs.io</td><td class="idx-sector">AI companies</td><td class="idx-score">93</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>11</td><td class="idx-site">intercom.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">93</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>12</td><td class="idx-site">railway.app</td><td class="idx-sector">Developer platforms</td><td class="idx-score">93</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>13</td><td class="idx-site">dropbox.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">91</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>14</td><td class="idx-site">heroku.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">91</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>15</td><td class="idx-site">paypal.com</td><td class="idx-sector">Finance</td><td class="idx-score">91</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>16</td><td class="idx-site">stripe.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">91</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>17</td><td class="idx-site">clevelandclinic.org</td><td class="idx-sector">Health</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>18</td><td class="idx-site">cohere.com</td><td class="idx-sector">AI companies</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>19</td><td class="idx-site">paytm.com</td><td class="idx-sector">India majors</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>20</td><td class="idx-site">shopify.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>21</td><td class="idx-site">vercel.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>22</td><td class="idx-site">zendesk.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">90</td><td><span class="grade grade-a">A</span></td></tr>
+<tr><td>23</td><td class="idx-site">salesforce.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">89</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>24</td><td class="idx-site">asana.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>25</td><td class="idx-site">atlassian.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>26</td><td class="idx-site">datadog.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>27</td><td class="idx-site">deepmind.google</td><td class="idx-sector">AI companies</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>28</td><td class="idx-site">edx.org</td><td class="idx-sector">Education</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>29</td><td class="idx-site">loom.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>30</td><td class="idx-site">target.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>31</td><td class="idx-site">teladoc.com</td><td class="idx-sector">Health</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>32</td><td class="idx-site">timesofindia.indiatimes.com</td><td class="idx-sector">India majors</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>33</td><td class="idx-site">twilio.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>34</td><td class="idx-site">wordpress.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">88</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>35</td><td class="idx-site">aljazeera.com</td><td class="idx-sector">News and media</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>36</td><td class="idx-site">apnews.com</td><td class="idx-sector">News and media</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>37</td><td class="idx-site">bbc.com</td><td class="idx-sector">News and media</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>38</td><td class="idx-site">healthline.com</td><td class="idx-sector">Health</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>39</td><td class="idx-site">netflix.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>40</td><td class="idx-site">supabase.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>41</td><td class="idx-site">techcrunch.com</td><td class="idx-sector">News and media</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>42</td><td class="idx-site">wired.com</td><td class="idx-sector">News and media</td><td class="idx-score">85</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>43</td><td class="idx-site">airbnb.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">83</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>44</td><td class="idx-site">bloomberg.com</td><td class="idx-sector">News and media</td><td class="idx-score">83</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>45</td><td class="idx-site">instacart.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">83</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>46</td><td class="idx-site">stability.ai</td><td class="idx-sector">AI companies</td><td class="idx-score">83</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>47</td><td class="idx-site">cnn.com</td><td class="idx-sector">News and media</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>48</td><td class="idx-site">docker.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>49</td><td class="idx-site">ebay.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>50</td><td class="idx-site">nytimes.com</td><td class="idx-sector">News and media</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>51</td><td class="idx-site">runwayml.com</td><td class="idx-sector">AI companies</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>52</td><td class="idx-site">theverge.com</td><td class="idx-sector">News and media</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>53</td><td class="idx-site">who.int</td><td class="idx-sector">Government and institutions</td><td class="idx-score">81</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>54</td><td class="idx-site">figma.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">79</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>55</td><td class="idx-site">goldmansachs.com</td><td class="idx-sector">Finance</td><td class="idx-score">79</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>56</td><td class="idx-site">pinterest.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">79</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>57</td><td class="idx-site">wise.com</td><td class="idx-sector">Finance</td><td class="idx-score">79</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>58</td><td class="idx-site">workday.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">79</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>59</td><td class="idx-site">cam.ac.uk</td><td class="idx-sector">Education</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>60</td><td class="idx-site">docusign.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>61</td><td class="idx-site">harvard.edu</td><td class="idx-sector">Education</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>62</td><td class="idx-site">hubspot.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>63</td><td class="idx-site">jpmorgan.com</td><td class="idx-sector">Finance</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>64</td><td class="idx-site">nasa.gov</td><td class="idx-sector">Government and institutions</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>65</td><td class="idx-site">replicate.com</td><td class="idx-sector">AI companies</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>66</td><td class="idx-site">verizon.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>67</td><td class="idx-site">vestas.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>68</td><td class="idx-site">vodafone.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>69</td><td class="idx-site">wellsfargo.com</td><td class="idx-sector">Finance</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>70</td><td class="idx-site">wipro.com</td><td class="idx-sector">India majors</td><td class="idx-score">78</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>71</td><td class="idx-site">apple.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>72</td><td class="idx-site">ashoka.edu.in</td><td class="idx-sector">Education</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>73</td><td class="idx-site">box.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>74</td><td class="idx-site">gitlab.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>75</td><td class="idx-site">icicibank.com</td><td class="idx-sector">India majors</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>76</td><td class="idx-site">linear.app</td><td class="idx-sector">Major SaaS</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>77</td><td class="idx-site">mistral.ai</td><td class="idx-sector">AI companies</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>78</td><td class="idx-site">notion.so</td><td class="idx-sector">Major SaaS</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>79</td><td class="idx-site">pfizer.com</td><td class="idx-sector">Health</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>80</td><td class="idx-site">usa.gov</td><td class="idx-sector">Government and institutions</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>81</td><td class="idx-site">walmart.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>82</td><td class="idx-site">whitehouse.gov</td><td class="idx-sector">Government and institutions</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>83</td><td class="idx-site">zoom.us</td><td class="idx-sector">Major SaaS</td><td class="idx-score">76</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>84</td><td class="idx-site">bankofamerica.com</td><td class="idx-sector">Finance</td><td class="idx-score">75</td><td><span class="grade grade-b">B</span></td></tr>
+<tr><td>85</td><td class="idx-site">airtel.in</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>86</td><td class="idx-site">americanexpress.com</td><td class="idx-sector">Finance</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>87</td><td class="idx-site">ikea.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>88</td><td class="idx-site">imf.org</td><td class="idx-sector">Government and institutions</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>89</td><td class="idx-site">khanacademy.org</td><td class="idx-sector">Education</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>90</td><td class="idx-site">nike.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>91</td><td class="idx-site">x.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">74</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>92</td><td class="idx-site">stripe.dev</td><td class="idx-sector">Finance</td><td class="idx-score">72</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>93</td><td class="idx-site">github.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">71</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>94</td><td class="idx-site">npr.org</td><td class="idx-sector">News and media</td><td class="idx-score">71</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>95</td><td class="idx-site">theguardian.com</td><td class="idx-sector">News and media</td><td class="idx-score">71</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>96</td><td class="idx-site">thehindu.com</td><td class="idx-sector">India majors</td><td class="idx-score">71</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>97</td><td class="idx-site">klarna.com</td><td class="idx-sector">Finance</td><td class="idx-score">70</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>98</td><td class="idx-site">bitbucket.org</td><td class="idx-sector">Developer platforms</td><td class="idx-score">69</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>99</td><td class="idx-site">google.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">69</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>100</td><td class="idx-site">siemens-energy.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">69</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>101</td><td class="idx-site">linkedin.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">68</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>102</td><td class="idx-site">stackoverflow.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">68</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>103</td><td class="idx-site">webmd.com</td><td class="idx-sector">Health</td><td class="idx-score">68</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>104</td><td class="idx-site">canada.ca</td><td class="idx-sector">Government and institutions</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>105</td><td class="idx-site">duolingo.com</td><td class="idx-sector">Education</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>106</td><td class="idx-site">flipkart.com</td><td class="idx-sector">India majors</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>107</td><td class="idx-site">kubernetes.io</td><td class="idx-sector">Developer platforms</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>108</td><td class="idx-site">ola.foundation</td><td class="idx-sector">India majors</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>109</td><td class="idx-site">reddit.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>110</td><td class="idx-site">relianceindustries.com</td><td class="idx-sector">India majors</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>111</td><td class="idx-site">schwab.com</td><td class="idx-sector">Finance</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>112</td><td class="idx-site">spotify.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>113</td><td class="idx-site">worldbank.org</td><td class="idx-sector">Government and institutions</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>114</td><td class="idx-site">wto.org</td><td class="idx-sector">Government and institutions</td><td class="idx-score">67</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>115</td><td class="idx-site">airtable.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>116</td><td class="idx-site">gov.uk</td><td class="idx-sector">Government and institutions</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>117</td><td class="idx-site">groq.com</td><td class="idx-sector">AI companies</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>118</td><td class="idx-site">hdfcbank.com</td><td class="idx-sector">India majors</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>119</td><td class="idx-site">pypi.org</td><td class="idx-sector">Developer platforms</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>120</td><td class="idx-site">visa.com</td><td class="idx-sector">Finance</td><td class="idx-score">66</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>121</td><td class="idx-site">meta.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">65</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>122</td><td class="idx-site">anthropic.com</td><td class="idx-sector">AI companies</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>123</td><td class="idx-site">bp.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>124</td><td class="idx-site">cdc.gov</td><td class="idx-sector">Health</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>125</td><td class="idx-site">chase.com</td><td class="idx-sector">Finance</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>126</td><td class="idx-site">digitalocean.com</td><td class="idx-sector">Developer platforms</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>127</td><td class="idx-site">enphase.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>128</td><td class="idx-site">huggingface.co</td><td class="idx-sector">AI companies</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>129</td><td class="idx-site">irs.gov</td><td class="idx-sector">Government and institutions</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>130</td><td class="idx-site">microsoft.com</td><td class="idx-sector">Telecom and consumer tech</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>131</td><td class="idx-site">miro.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>132</td><td class="idx-site">robinhood.com</td><td class="idx-sector">Finance</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>133</td><td class="idx-site">scale.com</td><td class="idx-sector">AI companies</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>134</td><td class="idx-site">stanford.edu</td><td class="idx-sector">Education</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>135</td><td class="idx-site">youtube.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">64</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>136</td><td class="idx-site">schneider-electric.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">62</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>137</td><td class="idx-site">snowflake.com</td><td class="idx-sector">Major SaaS</td><td class="idx-score">62</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>138</td><td class="idx-site">wikipedia.org</td><td class="idx-sector">Platforms and social</td><td class="idx-score">62</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>139</td><td class="idx-site">nhs.uk</td><td class="idx-sector">Health</td><td class="idx-score">60</td><td><span class="grade grade-c">C</span></td></tr>
+<tr><td>140</td><td class="idx-site">fidelity.com</td><td class="idx-sector">Finance</td><td class="idx-score">59</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>141</td><td class="idx-site">iitb.ac.in</td><td class="idx-sector">Education</td><td class="idx-score">59</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>142</td><td class="idx-site">mit.edu</td><td class="idx-sector">Education</td><td class="idx-score">59</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>143</td><td class="idx-site">amazon.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">57</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>144</td><td class="idx-site">shell.com</td><td class="idx-sector">Energy and climate</td><td class="idx-score">55</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>145</td><td class="idx-site">substack.com</td><td class="idx-sector">Platforms and social</td><td class="idx-score">55</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>146</td><td class="idx-site">tatamotors.com</td><td class="idx-sector">India majors</td><td class="idx-score">55</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>147</td><td class="idx-site">booking.com</td><td class="idx-sector">Retail and consumer</td><td class="idx-score">53</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>148</td><td class="idx-site">swiggy.com</td><td class="idx-sector">India majors</td><td class="idx-score">53</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>149</td><td class="idx-site">unfccc.int</td><td class="idx-sector">Government and institutions</td><td class="idx-score">50</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>150</td><td class="idx-site">un.org</td><td class="idx-sector">Government and institutions</td><td class="idx-score">47</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>151</td><td class="idx-site">arstechnica.com</td><td class="idx-sector">News and media</td><td class="idx-score">45</td><td><span class="grade grade-d">D</span></td></tr>
+<tr><td>152</td><td class="idx-site">europa.eu</td><td class="idx-sector">Government and institutions</td><td class="idx-score">45</td><td><span class="grade grade-d">D</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sectors">
+    <p class="kicker">Sector view</p>
+    <h2>Average score by sector</h2>
+    <div class="sector-chart">
+<svg viewBox="0 0 900 502" role="img" aria-label="Bar chart of average agent readiness score by sector, out of 100">
+<g dominant-baseline="middle">
+<line x1="240" y1="6" x2="240" y2="474" stroke="var(--line)" stroke-width="1"/><text x="240" y="492" text-anchor="middle" font-size="12" fill="var(--muted)">0</text>
+<line x1="390" y1="6" x2="390" y2="474" stroke="var(--line)" stroke-width="1"/><text x="390" y="492" text-anchor="middle" font-size="12" fill="var(--muted)">25</text>
+<line x1="540" y1="6" x2="540" y2="474" stroke="var(--line)" stroke-width="1"/><text x="540" y="492" text-anchor="middle" font-size="12" fill="var(--muted)">50</text>
+<line x1="690" y1="6" x2="690" y2="474" stroke="var(--line)" stroke-width="1"/><text x="690" y="492" text-anchor="middle" font-size="12" fill="var(--muted)">75</text>
+<line x1="840" y1="6" x2="840" y2="474" stroke="var(--line)" stroke-width="1"/><text x="840" y="492" text-anchor="middle" font-size="12" fill="var(--muted)">100</text>
+<g class="sector-bar"><title>Major SaaS, average 83/100 across 25 sites</title><text x="228" y="24" text-anchor="end" font-size="13" fill="var(--ink)">Major SaaS</text><rect x="240" y="10" width="498" height="20" rx="4" fill="var(--accent)"/><text x="746" y="24" font-size="12.5" fill="var(--muted)">83</text></g>
+<g class="sector-bar"><title>Developer platforms, average 81/100 across 15 sites</title><text x="228" y="60" text-anchor="end" font-size="13" fill="var(--ink)">Developer platforms</text><rect x="240" y="46" width="486.00000000000006" height="20" rx="4" fill="var(--accent)"/><text x="734" y="60" font-size="12.5" fill="var(--muted)">81</text></g>
+<g class="sector-bar"><title>AI companies, average 79/100 across 12 sites</title><text x="228" y="96" text-anchor="end" font-size="13" fill="var(--ink)">AI companies</text><rect x="240" y="82" width="474" height="20" rx="4" fill="var(--accent)"/><text x="722" y="96" font-size="12.5" fill="var(--muted)">79</text></g>
+<g class="sector-bar"><title>News and media, average 78/100 across 12 sites</title><text x="228" y="132" text-anchor="end" font-size="13" fill="var(--ink)">News and media</text><rect x="240" y="118" width="468" height="20" rx="4" fill="var(--accent)"/><text x="716" y="132" font-size="12.5" fill="var(--muted)">78</text></g>
+<g class="sector-bar"><title>Health, average 76/100 across 7 sites</title><text x="228" y="168" text-anchor="end" font-size="13" fill="var(--ink)">Health</text><rect x="240" y="154" width="456" height="20" rx="4" fill="var(--accent)"/><text x="704" y="168" font-size="12.5" fill="var(--muted)">76</text></g>
+<g class="sector-bar"><title>Telecom and consumer tech, average 75/100 across 11 sites</title><text x="228" y="204" text-anchor="end" font-size="13" fill="var(--ink)">Telecom and consumer tech</text><rect x="240" y="190" width="450" height="20" rx="4" fill="var(--accent)"/><text x="698" y="204" font-size="12.5" fill="var(--muted)">75</text></g>
+<g class="sector-bar"><title>Education, average 74/100 across 10 sites</title><text x="228" y="240" text-anchor="end" font-size="13" fill="var(--ink)">Education</text><rect x="240" y="226" width="444" height="20" rx="4" fill="var(--accent)"/><text x="692" y="240" font-size="12.5" fill="var(--muted)">74</text></g>
+<g class="sector-bar"><title>Retail and consumer, average 74/100 across 9 sites</title><text x="228" y="276" text-anchor="end" font-size="13" fill="var(--ink)">Retail and consumer</text><rect x="240" y="262" width="444" height="20" rx="4" fill="var(--accent)"/><text x="692" y="276" font-size="12.5" fill="var(--muted)">74</text></g>
+<g class="sector-bar"><title>Finance, average 73/100 across 14 sites</title><text x="228" y="312" text-anchor="end" font-size="13" fill="var(--ink)">Finance</text><rect x="240" y="298" width="438" height="20" rx="4" fill="var(--accent)"/><text x="686" y="312" font-size="12.5" fill="var(--muted)">73</text></g>
+<g class="sector-bar"><title>India majors, average 71/100 across 11 sites</title><text x="228" y="348" text-anchor="end" font-size="13" fill="var(--ink)">India majors</text><rect x="240" y="334" width="426" height="20" rx="4" fill="var(--accent)"/><text x="674" y="348" font-size="12.5" fill="var(--muted)">71</text></g>
+<g class="sector-bar"><title>Platforms and social, average 70/100 across 7 sites</title><text x="228" y="384" text-anchor="end" font-size="13" fill="var(--ink)">Platforms and social</text><rect x="240" y="370" width="420" height="20" rx="4" fill="var(--accent)"/><text x="668" y="384" font-size="12.5" fill="var(--muted)">70</text></g>
+<g class="sector-bar"><title>Government and institutions, average 66/100 across 13 sites</title><text x="228" y="420" text-anchor="end" font-size="13" fill="var(--ink)">Government and institutions</text><rect x="240" y="406" width="396" height="20" rx="4" fill="var(--accent)"/><text x="644" y="420" font-size="12.5" fill="var(--muted)">66</text></g>
+<g class="sector-bar"><title>Energy and climate, average 65/100 across 6 sites</title><text x="228" y="456" text-anchor="end" font-size="13" fill="var(--ink)">Energy and climate</text><rect x="240" y="442" width="390" height="20" rx="4" fill="var(--accent)"/><text x="638" y="456" font-size="12.5" fill="var(--muted)">65</text></g>
+</g>
+</svg>
+    </div>
+    <details class="sector-table-details">
+      <summary>View as a table</summary>
+    <div class="idx-table-wrap">
+      <table class="idx-table">
+        <thead><tr><th>Sector</th><th>Sites audited</th><th>Average score</th></tr></thead>
+        <tbody>
+<tr><td>Major SaaS</td><td>25</td><td class="idx-score">83</td></tr>
+<tr><td>Developer platforms</td><td>15</td><td class="idx-score">81</td></tr>
+<tr><td>AI companies</td><td>12</td><td class="idx-score">79</td></tr>
+<tr><td>News and media</td><td>12</td><td class="idx-score">78</td></tr>
+<tr><td>Health</td><td>7</td><td class="idx-score">76</td></tr>
+<tr><td>Telecom and consumer tech</td><td>11</td><td class="idx-score">75</td></tr>
+<tr><td>Education</td><td>10</td><td class="idx-score">74</td></tr>
+<tr><td>Retail and consumer</td><td>9</td><td class="idx-score">74</td></tr>
+<tr><td>Finance</td><td>14</td><td class="idx-score">73</td></tr>
+<tr><td>India majors</td><td>11</td><td class="idx-score">71</td></tr>
+<tr><td>Platforms and social</td><td>7</td><td class="idx-score">70</td></tr>
+<tr><td>Government and institutions</td><td>13</td><td class="idx-score">66</td></tr>
+<tr><td>Energy and climate</td><td>6</td><td class="idx-score">65</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </details>
+  </section>
+
+  <section id="unreachable" class="band">
+    <p class="kicker">The invisible</p>
+    <h2>48 sites that block automated visitors</h2>
+    <p class="section-note">These sites returned errors or bot walls to a well behaved auditor. To an AI assistant they effectively do not exist.</p>
+    <ul class="authorship-list">
+<li><strong>openai.com</strong><span>AI companies</span></li>
+<li><strong>perplexity.ai</strong><span>AI companies</span></li>
+<li><strong>x.ai</strong><span>AI companies</span></li>
+<li><strong>midjourney.com</strong><span>AI companies</span></li>
+<li><strong>slack.com</strong><span>Major SaaS</span></li>
+<li><strong>canva.com</strong><span>Major SaaS</span></li>
+<li><strong>servicenow.com</strong><span>Major SaaS</span></li>
+<li><strong>npmjs.com</strong><span>Developer platforms</span></li>
+<li><strong>reuters.com</strong><span>News and media</span></li>
+<li><strong>wsj.com</strong><span>News and media</span></li>
+<li><strong>washingtonpost.com</strong><span>News and media</span></li>
+<li><strong>economist.com</strong><span>News and media</span></li>
+<li><strong>ft.com</strong><span>News and media</span></li>
+<li><strong>axios.com</strong><span>News and media</span></li>
+<li><strong>nih.gov</strong><span>Government and institutions</span></li>
+<li><strong>oecd.org</strong><span>Government and institutions</span></li>
+<li><strong>india.gov.in</strong><span>Government and institutions</span></li>
+<li><strong>bestbuy.com</strong><span>Retail and consumer</span></li>
+<li><strong>etsy.com</strong><span>Retail and consumer</span></li>
+<li><strong>expedia.com</strong><span>Retail and consumer</span></li>
+<li><strong>doordash.com</strong><span>Retail and consumer</span></li>
+<li><strong>adidas.com</strong><span>Retail and consumer</span></li>
+<li><strong>zara.com</strong><span>Retail and consumer</span></li>
+<li><strong>hm.com</strong><span>Retail and consumer</span></li>
+<li><strong>costco.com</strong><span>Retail and consumer</span></li>
+<li><strong>uber.com</strong><span>Retail and consumer</span></li>
+<li><strong>mastercard.com</strong><span>Finance</span></li>
+<li><strong>coinbase.com</strong><span>Finance</span></li>
+<li><strong>tcs.com</strong><span>India majors</span></li>
+<li><strong>infosys.com</strong><span>India majors</span></li>
+<li><strong>zomato.com</strong><span>India majors</span></li>
+<li><strong>makemytrip.com</strong><span>India majors</span></li>
+<li><strong>ndtv.com</strong><span>India majors</span></li>
+<li><strong>ox.ac.uk</strong><span>Education</span></li>
+<li><strong>udemy.com</strong><span>Education</span></li>
+<li><strong>mayoclinic.org</strong><span>Health</span></li>
+<li><strong>moderna.com</strong><span>Health</span></li>
+<li><strong>zocdoc.com</strong><span>Health</span></li>
+<li><strong>iea.org</strong><span>Energy and climate</span></li>
+<li><strong>irena.org</strong><span>Energy and climate</span></li>
+<li><strong>tesla.com</strong><span>Energy and climate</span></li>
+<li><strong>orsted.com</strong><span>Energy and climate</span></li>
+<li><strong>sony.com</strong><span>Telecom and consumer tech</span></li>
+<li><strong>t-mobile.com</strong><span>Telecom and consumer tech</span></li>
+<li><strong>jio.com</strong><span>Telecom and consumer tech</span></li>
+<li><strong>medium.com</strong><span>Platforms and social</span></li>
+<li><strong>tiktok.com</strong><span>Platforms and social</span></li>
+<li><strong>quora.com</strong><span>Platforms and social</span></li>
+    </ul>
+  </section>
+
+  <section id="check">
+    <p class="kicker">Try it live</p>
+    <h2>Check your own site</h2>
+    <p class="section-note">Run the same nine check audit on any public website, right here. Limited to a few checks per visitor per hour.</p>
+    <form id="check-form" class="check-form">
+      <input type="text" id="check-input" class="idx-filter" placeholder="yourwebsite.com" aria-label="Website to audit" required>
+      <button type="submit" class="cta">Audit it</button>
+    </form>
+    <div id="check-result" class="check-result" hidden></div>
+  </section>
+
+  <section id="methodology">
+    <p class="kicker">Methodology</p>
+    <h2>How the index works</h2>
+    <p>Each site is crawled and scored by <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/agent-readiness-auditor">agent-readiness-auditor</a>, an open source instrument published on npm, across nine checks. Hidden prompt injection text, llms.txt, the robots.txt stance on AI crawlers, structured data, accountability links, a sitemap, content structured for AI answers, accidental index blocking, and whether an agent endpoint such as an MCP server is advertised. Prompt injection hygiene carries the most weight because it is a safety property.</p>
+    <p>The panel holds 200 prominent sites across twelve sectors, chosen for reach and influence. The first 84 carry over from <a target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor/tree/main/reports/2026-state-of-the-agentic-web">The State of the Agentic Web study</a> so results stay comparable across editions. Anyone can reproduce any score by running <strong>npx agent-readiness-auditor example.com</strong>. The panel list and raw results for this edition are published in the open.</p>
+    <p><a class="link-btn" target="_blank" rel="noopener" href="https://github.com/asish-singh/asishsingh.in/tree/main/agentic-web-index/data">Panel and raw data →</a> <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor">The instrument →</a></p>
+  </section>
+
+  <section id="cite" class="band contact-panel">
+    <p class="kicker">Use this work</p>
+    <h2>Cite the index</h2>
+    <p>The Agentic Web Index is free to cite and reuse with attribution. Quote it as "The Agentic Web Index, Q3 2026, asishsingh.in". For questions about the data or methodology, <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/asishsingh">reach me on LinkedIn</a>.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Asish Singh</p>
+    <div class="footer-links">
+      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/asishsingh">LinkedIn</a>
+      <a target="_blank" rel="noopener" href="https://github.com/asish-singh">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('check-form');
+  if (form) {
+    var out = document.getElementById('check-result');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var target = document.getElementById('check-input').value.trim();
+      if (!target) return;
+      out.hidden = false;
+      out.textContent = 'Auditing ' + target + '… this can take up to a minute.';
+      fetch('https://audit.asishsingh.in/api/audit?target=' + encodeURIComponent(target))
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.error) { out.textContent = d.error; return; }
+          var rows = d.findings.map(function (f) {
+            return '<li><strong>' + (f.severity === 'pass' ? '✓' : '✗') + ' ' + f.title +
+              ' (' + f.score + '/' + f.max + ')</strong><span>' + f.detail + '</span></li>';
+          }).join('');
+          out.innerHTML = '<p class="check-score">' + d.origin + ' scores <strong>' + d.score +
+            '/' + d.maxScore + '</strong>, grade <span class="grade grade-' +
+            d.grade.toLowerCase().replace('+', 'p') + '">' + d.grade + '</span></p>' +
+            '<ul class="authorship-list">' + rows + '</ul>';
+        })
+        .catch(function () { out.textContent = 'Could not reach the audit service. Try npx agent-readiness-auditor ' + target; });
+    });
+  }
+
+  var input = document.getElementById('idx-filter');
+  if (!input) return;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.idx-table tbody tr'));
+  input.addEventListener('input', function () {
+    var q = input.value.toLowerCase();
+    rows.forEach(function (r) {
+      r.style.display = r.textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Agentic Web Index | Asish Singh</title>
+<meta name="description" content="The Agentic Web Index ranks 200 prominent websites by how ready they are for AI assistants and autonomous agents, scored with the open source agent readiness auditor. Updated quarterly by Asish Singh.">
+<link rel="canonical" href="https://asishsingh.in/agentic-web-index/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Agentic Web Index, {{EDITION}}">
+<meta property="og:description" content="200 prominent websites ranked by AI agent readiness. Only {{LLMS}}% publish llms.txt. Median score {{MEDIAN}}/100.">
+<meta property="og:url" content="https://asishsingh.in/agentic-web-index/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Agentic Web Index, {{EDITION}}",
+  "description": "A quarterly benchmark ranking 200 prominent websites by AI agent readiness across nine automated checks, including llms.txt, robots.txt stance on AI crawlers, structured data, and prompt injection hygiene.",
+  "url": "https://asishsingh.in/agentic-web-index/",
+  "creator": {"@type": "Person", "name": "Asish Singh", "url": "https://asishsingh.in"},
+  "temporalCoverage": "2026-07",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isBasedOn": "https://github.com/asish-singh/agent-readiness-auditor"
+}
+</script>
+<link rel="stylesheet" href="/styles.css?v=16">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="/">Asish Singh</a>
+    <div class="nav-links">
+      <a href="/agentic-web-index/">Index</a>
+      <a href="/open-source/">Open Source</a>
+      <a href="/#about">About</a>
+      <a href="/#conferences">Conferences</a>
+      <a class="nav-cta" href="/#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Quarterly benchmark · {{EDITION}}</p>
+      <h1>The Agentic Web Index</h1>
+      <p class="tagline">{{PANEL}} prominent websites, ranked by how ready they are for the AI assistants and autonomous agents that increasingly read the web on people's behalf.</p>
+      <p>Every site is scored 0 to 100 by the open source <a target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor">agent readiness auditor</a> across nine automated checks. The full methodology and data are public and reproducible. Published {{EDITION_DATE}}, updated quarterly.</p>
+    </div>
+  </section>
+
+  <section class="band band-featured">
+    <p class="kicker">Headline findings</p>
+    <h2>The web is still not ready for AI agents</h2>
+    <div class="stats">
+      <div class="stat"><strong data-target="{{MEDIAN}}" data-suffix="/100">{{MEDIAN}}/100</strong><span>median score</span></div>
+      <div class="stat"><strong data-target="{{LLMS}}" data-suffix="%">{{LLMS}}%</strong><span>publish llms.txt</span></div>
+      <div class="stat"><strong data-target="{{ROBOTS}}" data-suffix="%">{{ROBOTS}}%</strong><span>give AI crawlers explicit rules</span></div>
+      <div class="stat"><strong data-target="{{BLOCKED}}" data-suffix="%">{{BLOCKED}}%</strong><span>block automated visitors entirely</span></div>
+    </div>
+    <p style="margin-top:1.5rem">Of the {{PANEL}} sites on the panel, {{AUDITED}} could be audited and {{UNREACHABLE_COUNT}} refused automated visitors outright, making themselves invisible to AI assistants. The strongest sites this edition are <strong>{{TOPSITE}}</strong> at {{TOPSCORE}}/100. Only {{FAQ}}% of auditable sites publish content structured in the formats AI answers quote most readily.</p>
+  </section>
+
+  <section id="rankings">
+    <p class="kicker">The rankings</p>
+    <h2>All {{AUDITED}} audited sites</h2>
+    <p class="section-note">Scores from the nine check audit. Higher is better. Type to filter the table.</p>
+    <input type="search" id="idx-filter" class="idx-filter" placeholder="Filter by site or sector…" aria-label="Filter rankings">
+    <div class="idx-table-wrap">
+      <table class="idx-table">
+        <thead><tr><th>#</th><th>Site</th><th>Sector</th><th>Score</th><th>Grade</th></tr></thead>
+        <tbody>
+{{TABLE_ROWS}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sectors">
+    <p class="kicker">Sector view</p>
+    <h2>Average score by sector</h2>
+    <div class="sector-chart">
+{{SECTOR_CHART}}
+    </div>
+    <details class="sector-table-details">
+      <summary>View as a table</summary>
+    <div class="idx-table-wrap">
+      <table class="idx-table">
+        <thead><tr><th>Sector</th><th>Sites audited</th><th>Average score</th></tr></thead>
+        <tbody>
+{{SECTOR_ROWS}}
+        </tbody>
+      </table>
+    </div>
+    </details>
+  </section>
+
+  <section id="unreachable" class="band">
+    <p class="kicker">The invisible</p>
+    <h2>{{UNREACHABLE_COUNT}} sites that block automated visitors</h2>
+    <p class="section-note">These sites returned errors or bot walls to a well behaved auditor. To an AI assistant they effectively do not exist.</p>
+    <ul class="authorship-list">
+{{UNREACHABLE_ROWS}}
+    </ul>
+  </section>
+
+  <section id="check">
+    <p class="kicker">Try it live</p>
+    <h2>Check your own site</h2>
+    <p class="section-note">Run the same nine check audit on any public website, right here. Limited to a few checks per visitor per hour.</p>
+    <form id="check-form" class="check-form">
+      <input type="text" id="check-input" class="idx-filter" placeholder="yourwebsite.com" aria-label="Website to audit" required>
+      <button type="submit" class="cta">Audit it</button>
+    </form>
+    <div id="check-result" class="check-result" hidden></div>
+  </section>
+
+  <section id="methodology">
+    <p class="kicker">Methodology</p>
+    <h2>How the index works</h2>
+    <p>Each site is crawled and scored by <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/agent-readiness-auditor">agent-readiness-auditor</a>, an open source instrument published on npm, across nine checks. Hidden prompt injection text, llms.txt, the robots.txt stance on AI crawlers, structured data, accountability links, a sitemap, content structured for AI answers, accidental index blocking, and whether an agent endpoint such as an MCP server is advertised. Prompt injection hygiene carries the most weight because it is a safety property.</p>
+    <p>The panel holds 200 prominent sites across twelve sectors, chosen for reach and influence. The first 84 carry over from <a target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor/tree/main/reports/2026-state-of-the-agentic-web">The State of the Agentic Web study</a> so results stay comparable across editions. Anyone can reproduce any score by running <strong>npx agent-readiness-auditor example.com</strong>. The panel list and raw results for this edition are published in the open.</p>
+    <p><a class="link-btn" target="_blank" rel="noopener" href="https://github.com/asish-singh/asishsingh.in/tree/main/agentic-web-index/data">Panel and raw data →</a> <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/asish-singh/agent-readiness-auditor">The instrument →</a></p>
+  </section>
+
+  <section id="cite" class="band contact-panel">
+    <p class="kicker">Use this work</p>
+    <h2>Cite the index</h2>
+    <p>The Agentic Web Index is free to cite and reuse with attribution. Quote it as "The Agentic Web Index, {{EDITION}}, asishsingh.in". For questions about the data or methodology, <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/asishsingh">reach me on LinkedIn</a>.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Asish Singh</p>
+    <div class="footer-links">
+      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/asishsingh">LinkedIn</a>
+      <a target="_blank" rel="noopener" href="https://github.com/asish-singh">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('check-form');
+  if (form) {
+    var out = document.getElementById('check-result');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var target = document.getElementById('check-input').value.trim();
+      if (!target) return;
+      out.hidden = false;
+      out.textContent = 'Auditing ' + target + '… this can take up to a minute.';
+      fetch('https://audit.asishsingh.in/api/audit?target=' + encodeURIComponent(target))
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.error) { out.textContent = d.error; return; }
+          var rows = d.findings.map(function (f) {
+            return '<li><strong>' + (f.severity === 'pass' ? '✓' : '✗') + ' ' + f.title +
+              ' (' + f.score + '/' + f.max + ')</strong><span>' + f.detail + '</span></li>';
+          }).join('');
+          out.innerHTML = '<p class="check-score">' + d.origin + ' scores <strong>' + d.score +
+            '/' + d.maxScore + '</strong>, grade <span class="grade grade-' +
+            d.grade.toLowerCase().replace('+', 'p') + '">' + d.grade + '</span></p>' +
+            '<ul class="authorship-list">' + rows + '</ul>';
+        })
+        .catch(function () { out.textContent = 'Could not reach the audit service. Try npx agent-readiness-auditor ' + target; });
+    });
+  }
+
+  var input = document.getElementById('idx-filter');
+  if (!input) return;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.idx-table tbody tr'));
+  input.addEventListener('input', function () {
+    var q = input.value.toLowerCase();
+    rows.forEach(function (r) {
+      r.style.display = r.textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
