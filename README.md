@@ -47,4 +47,4 @@ The code (generator and live audit service) is MIT licensed, see `LICENSE`. The 
 
 ## Author
 
-Asish Singh. Related work: [agent-readiness-auditor](https://github.com/asish-singh/agent-readiness-auditor), [ai-search-playbook](https://github.com/asish-singh/ai-search-playbook), [agentic-web-governance-pack](https://github.com/asish-singh/agentic-web-governance-pack).
+Asish Singh. Related work: [agent-readiness-auditor](https://github.com/asish-singh/agent-readiness-auditor), [ai-search-playbook](https://github.com/asish-singh/ai-search-playbook), [agentic-web-governance-pack](https://github.com/asish-singh/agentic-web-governance-pack), [The Agentic Web Governance Gap](https://github.com/asish-singh/agentic-web-governance-gap) (the policy study built on this data).
