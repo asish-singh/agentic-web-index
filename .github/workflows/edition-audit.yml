@@ -1,0 +1,105 @@
+name: Edition audit
+
+# Re runs the full panel on GitHub's servers and rebuilds the published page,
+# so each edition of the Index is produced by a reproducible job rather than
+# by hand on a laptop. Free on public repositories.
+#
+# Fires automatically on the first of January, April, July and October, and can
+# be started any time from the Actions tab with "Run workflow".
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 'Edition label, for example 2026-q4. Leave blank to derive it from today.'
+        required: false
+        default: ''
+      commit:
+        description: 'Commit the new results and rebuilt page to the repository'
+        type: boolean
+        default: true
+  schedule:
+    # 03:17 UTC on the first day of each quarter. The odd minute avoids the
+    # top of the hour, when scheduled runs are most likely to be delayed.
+    - cron: '17 3 1 1,4,7,10 *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edition-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    # The panel takes about ten minutes. The ceiling is generous so a batch of
+    # slow or unresponsive sites cannot cause a false failure. GitHub's own hard
+    # limit for a single job is six hours.
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve the edition label
+        id: edition
+        run: |
+          label="${{ inputs.edition }}"
+          if [ -z "$label" ]; then
+            year=$(date -u +%Y)
+            month=$(date -u +%-m)
+            quarter=$(( (month - 1) / 3 + 1 ))
+            label="${year}-q${quarter}"
+          fi
+          echo "label=$label" >> "$GITHUB_OUTPUT"
+          echo "Edition $label"
+
+      - name: Audit the panel
+        run: |
+          npx --yes agent-readiness-auditor \
+            --batch data/panel.txt --csv \
+            > "data/results-${{ steps.edition.outputs.label }}.csv"
+
+      - name: Summarise the run
+        run: |
+          file="data/results-${{ steps.edition.outputs.label }}.csv"
+          total=$(( $(wc -l < "$file") - 1 ))
+          scored=$(awk -F, 'NR>1 && $3 != "" { n++ } END { print n+0 }' "$file")
+          median=$(awk -F, 'NR>1 && $3 != "" { print $3 }' "$file" | sort -n | \
+            awk '{ a[NR]=$1 } END { if (NR) print (NR%2) ? a[(NR+1)/2] : int((a[NR/2]+a[NR/2+1])/2) }')
+          {
+            echo "### Edition ${{ steps.edition.outputs.label }}"
+            echo ""
+            echo "Panel sites attempted: $total"
+            echo "Scored successfully: $scored"
+            echo "Median score: ${median:-n/a}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild the published page
+        run: cd data && node build-index.js
+
+      - name: Upload the results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ steps.edition.outputs.label }}
+          path: |
+            data/results-${{ steps.edition.outputs.label }}.csv
+            index.html
+          retention-days: 90
+
+      - name: Commit the new edition
+        if: ${{ github.event_name == 'schedule' || inputs.commit }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "data/results-${{ steps.edition.outputs.label }}.csv" index.html
+          if git diff --cached --quiet; then
+            echo 'No change in the audit results, nothing to commit.'
+            exit 0
+          fi
+          git commit -m "Add ${{ steps.edition.outputs.label }} audit results and rebuild the page"
+          git push
