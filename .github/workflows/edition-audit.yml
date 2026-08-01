@@ -58,11 +58,55 @@ jobs:
           echo "label=$label" >> "$GITHUB_OUTPUT"
           echo "Edition $label"
 
+      # The panel is audited in small chunks. A single unresponsive server can
+      # end a socket in a state that crashes Node's built in HTTP client from
+      # outside any catch block, which would otherwise lose the whole run. Each
+      # chunk is retried once, and any chunk that still fails is reported rather
+      # than quietly dropped.
       - name: Audit the panel
+        id: audit
         run: |
-          npx --yes agent-readiness-auditor \
-            --batch data/panel.txt --csv \
-            > "data/results-${{ steps.edition.outputs.label }}.csv"
+          set -uo pipefail
+          out="data/results-${{ steps.edition.outputs.label }}.csv"
+          work="$(mktemp -d)"
+          grep -vE '^\s*(#|$)' data/panel.txt > "$work/panel.txt"
+          split -l 10 "$work/panel.txt" "$work/chunk-"
+
+          header_written=0
+          failed_chunks=0
+          missing=0
+          : > "$out"
+
+          for chunk in "$work"/chunk-*; do
+            for attempt in 1 2; do
+              if npx --yes agent-readiness-auditor --batch "$chunk" --csv > "$chunk.csv" 2>"$chunk.err"; then
+                break
+              fi
+              if [ "$attempt" = 2 ]; then
+                failed_chunks=$((failed_chunks + 1))
+                missing=$((missing + $(wc -l < "$chunk")))
+                echo "Chunk $(basename "$chunk") failed twice:"
+                tail -3 "$chunk.err"
+                continue 2
+              fi
+              echo "Chunk $(basename "$chunk") failed on attempt 1, retrying."
+            done
+
+            if [ "$header_written" = 0 ]; then
+              cat "$chunk.csv" >> "$out"
+              header_written=1
+            else
+              tail -n +2 "$chunk.csv" >> "$out"
+            fi
+          done
+
+          echo "failed_chunks=$failed_chunks" >> "$GITHUB_OUTPUT"
+          echo "missing=$missing" >> "$GITHUB_OUTPUT"
+
+          if [ "$header_written" = 0 ]; then
+            echo 'Every chunk failed, so there are no results to publish.'
+            exit 1
+          fi
 
       - name: Summarise the run
         run: |
@@ -77,6 +121,8 @@ jobs:
             echo "Panel sites attempted: $total"
             echo "Scored successfully: $scored"
             echo "Median score: ${median:-n/a}"
+            echo "Chunks abandoned after a retry: ${{ steps.audit.outputs.failed_chunks }}"
+            echo "Panel sites never reached: ${{ steps.audit.outputs.missing }}"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Rebuild the published page
